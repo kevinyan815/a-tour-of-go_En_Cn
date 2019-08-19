@@ -42,3 +42,5 @@ func main() {
 	say("hello")
 }
 ```
+
+[Source URL](https://tour.golang.org/concurrency/1)
