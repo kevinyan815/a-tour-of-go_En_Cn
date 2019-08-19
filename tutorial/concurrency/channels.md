@@ -24,7 +24,7 @@ ch := make(chan int)
 
 > The example code sums the numbers in a slice, distributing the work between two goroutines. Once both goroutines have completed their computation, it calculates the final result.
 
-示例代码将一个切片中的数字分发给两个`goroutine`协程，当两个`goroutine`协程完成计算后，用计算结果来算出最终的结构。
+示例代码将一个切片中的数字分发给两个`goroutine`协程，当两个`goroutine`协程完成计算后，用计算结果来算出最终的结果。
 
 ```
 package main
