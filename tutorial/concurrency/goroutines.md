@@ -14,7 +14,7 @@ f(x, y, z)
 ```
 >The evaluation of f, x, y, and z happens in the current goroutine and the execution of f happens in the new goroutine.
 
-`f`，`x`，`y`，`z`在当前的`goroutine`中进行赋值计算，在新开启的`goroutine`中执行
+`f`，`x`，`y`，`z`在当前的`goroutine`(主线程)中进行赋值计算，在新开启的`goroutine`中执行
 
 > Goroutines run in the same address space, so access to shared memory must be synchronized. The sync package provides useful primitives, although you won't need them much in Go as there are other primitives. (See the next slide.)
 
