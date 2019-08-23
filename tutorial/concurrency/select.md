@@ -2,7 +2,7 @@
 
 > The select statement lets a goroutine wait on multiple communication operations.
 
-`select`语句可以选择处理列出的多个通信通道中的一个。
+`select`语句可以让一个`goroutine`在多通信通道中等待。
 
 > A select blocks until one of its cases can run, then it executes that case. It chooses one at random if multiple are ready.
 
