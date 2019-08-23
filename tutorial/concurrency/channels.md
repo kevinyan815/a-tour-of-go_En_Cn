@@ -20,7 +20,7 @@ ch := make(chan int)
 
 > By default, sends and receives block until the other side is ready. This allows goroutines to synchronize without explicit locks or condition variables.
 
-默认情况下，通道的读写会被阻塞知道另一端就绪。这允许`goroutine`无需显示加锁或者声明条件变量就能在相互之前同步状态。
+默认情况下，通道的读写会被阻塞直到另一端就绪。这允许`goroutine`无需显示加锁或者声明条件变量就能在相互之前同步状态。
 
 > The example code sums the numbers in a slice, distributing the work between two goroutines. Once both goroutines have completed their computation, it calculates the final result.
 
