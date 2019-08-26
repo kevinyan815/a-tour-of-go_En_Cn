@@ -61,5 +61,9 @@ type Tree struct {
 Tree包的文档可以在[这里找到](https://godoc.org/golang.org/x/tour/tree#Tree)
 
 
+### 题解
+
+附加一个解题答案[equivalent-binary-trees.go](https://github.com/kevinyan815/a-tour-of-go_En_Cn/blob/master/tutorial/concurrency/exercises/equivalent-binary-trees.go)，使用了深度优先搜索来中序遍历二叉树（使用深度优先搜索则一定会用到递归）将遍历到的每个节点放到对应的通道中，然后再Same函数中比较从两个通道中读取到的值是否都一样。
+
 
     
