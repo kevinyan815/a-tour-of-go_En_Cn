@@ -22,9 +22,12 @@ type Tree struct {
 ```
 
 
-1. Implement the Walk function.
+> 1. Implement the Walk function.
 
-2. Test the Walk function.
+1. 实现函数`Walk`
+
+
+> 2. Test the Walk function.
 
     The function tree.New(k) constructs a randomly-structured (but always sorted) binary tree holding the values k, 2k, 3k, ..., 10k.
 
@@ -32,13 +35,31 @@ type Tree struct {
 
     go Walk(tree.New(1), ch)
     Then read and print 10 values from the channel. It should be the numbers 1, 2, 3, ..., 10.
+    
+2. 测试编写的`Walk`函数
+   `tree.New(k)`会构造一个结构随机但总是排序好的二叉树，数据节点携带的值为k, 2k, 3k, ......, 10k.
+   创建一个新的通道ch并开始调用函数`Walk`:
+   
+   go Walk(tree.New(1), ch)
+   然后从通道读取并打印10个值。他们应该是1, 2, 3 ......, 10.
 
-3. Implement the Same function using Walk to determine whether t1 and t2 store the same values.
+>3. Implement the Same function using Walk to determine whether t1 and t2 store the same values.
 
-4. Test the Same function.
+3. 实现`Same`函数, `Same`会使用`Walk`函数来判断t1和t2是否存储了相同的值。
+
+> 4. Test the Same function.
 
     Same(tree.New(1), tree.New(1)) should return true, and Same(tree.New(1), tree.New(2)) should return false.
+
+4. 测试`Same`函数
+
+    Same(tree.New(1), tree.New(1)) 应该返回true, Same(tree.New(1), tree.New(2)) 应该返回false.
     
 
-The documentation for Tree can be found [here](https://godoc.org/golang.org/x/tour/tree#Tree).
-    The function tree.New(k) constructs a randomly-structured (but always sorted) binary tree holding the values k, 2k, 3k, ..., 10k.
+> The documentation for Tree can be found [here](https://godoc.org/golang.org/x/tour/tree#Tree).
+
+Tree包的文档可以在[这里找到](https://godoc.org/golang.org/x/tour/tree#Tree)
+
+
+
+    
