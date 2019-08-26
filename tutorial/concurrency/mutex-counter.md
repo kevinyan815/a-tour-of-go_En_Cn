@@ -24,4 +24,35 @@ Go的标准库里通过`sync.Mutex`和它的两个方法`Lock` `Unlock`提供了
 
 > We can also use defer to ensure the mutex will be unlocked as in the Value method.
 
-我们可以定义一个在
+我们可以将一个代码库包裹在`Lock`和`Unlock`调用中让他在互斥模式下被执行，就像下面的`Inc`方法中展示的那样。在`Value`方法中使用`defer`保证了`mutex`会被正确释放掉。
+
+### Example Code
+
+```
+func (c *SafeCounter) Inc(key string) {
+	c.mux.Lock()
+	// Lock so only one goroutine at a time can access the map c.v.
+	c.v[key]++
+	c.mux.Unlock()
+}
+
+// Value returns the current value of the counter for the given key.
+func (c *SafeCounter) Value(key string) int {
+	c.mux.Lock()
+	// Lock so only one goroutine at a time can access the map c.v.
+	defer c.mux.Unlock()
+	return c.v[key]
+}
+
+func main() {
+	c := SafeCounter{v: make(map[string]int)}
+	for i := 0; i < 1000; i++ {
+		go c.Inc("somekey")
+	}
+
+	time.Sleep(time.Second)
+	fmt.Println(c.Value("somekey"))
+}
+```
+
+[Source URL](https://tour.golang.org/concurrency/9)
