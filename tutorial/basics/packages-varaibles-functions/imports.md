@@ -30,3 +30,19 @@ import "math"
 > But it is good style to use the factored import statement.
 
 不过使用分组导入语句是更好的形式。
+
+## Supplement
+
+### package alias
+
+> You can give a alias to imported package as what name you want to use. Below package "html/template" will be imported with a specified name "htemplate"
+
+你可以使用任意想使用的标识符名字为导入的包起别名。下面的代码中包"html/template" 将以"htemplate"包名被导入到程序中。
+
+
+```
+import (
+    "text/template"
+    htemplate "html/template" // package template now imported as htemplate
+)
+```
