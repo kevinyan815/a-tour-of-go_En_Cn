@@ -68,4 +68,42 @@ func main() {
 }
 ```
 
+## For is Go's "while"
+
+## For 是 Go中的 "while"
+
+> At that point you can drop the semicolons: C's while is spelled for in Go.
+
+此时你可以去掉分号，因为 C 的 while 在 Go 中叫做 for。
+
+```
+package main
+
+import "fmt"
+
+func main() {
+	sum := 1
+	for sum < 1000 {
+		sum += sum
+	}
+	fmt.Println(sum)
+}
+```
+
+## Forever
+
+## 无限循环
+
+> If you omit the loop condition it loops forever, so an infinite loop is compactly expressed.
+
+如果省略循环条件，该循环就不会结束，因此无限循环可以写得很紧凑。
+
+```
+package main
+
+func main() {
+	for {
+	}
+}
+```
 
