@@ -72,7 +72,9 @@ func main() {
 
 在一个if语句的简短语句中声明的变量在其后面跟的任意个else代码块中都是可访问的。
 
-(Both calls to pow return their results before the call to fmt.Println in main begins.)
+> (Both calls to pow return their results before the call to fmt.Println in main begins.)
+
+（在 main 的 fmt.Println 调用开始前，两次对 pow 的调用均已执行并返回其各自的结果。）
 
 ```
 package main
