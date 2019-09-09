@@ -48,3 +48,24 @@ func main() {
 ```
 
 [Source URL](https://tour.golang.org/flowcontrol/1)
+
+
+> The init and post statements are optional.
+
+初始化语句和后置语句是可选的，比如下面的代码
+
+```
+package main
+
+import "fmt"
+
+func main() {
+	sum := 1
+	for ; sum < 1000; {
+		sum += sum
+	}
+	fmt.Println(sum)
+}
+```
+
+
