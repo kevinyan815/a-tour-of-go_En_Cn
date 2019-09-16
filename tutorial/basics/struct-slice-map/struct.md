@@ -4,7 +4,7 @@
 
 结构体是字段的集合。
 
-```
+```go
 package main
 
 import "fmt"
@@ -25,7 +25,7 @@ func main() {
 
 结构体的字段通过点号`.`来访问。
 
-```
+```go
 package main
 
 import "fmt"
@@ -66,7 +66,7 @@ func main() {
 
 特殊的前缀`&`返回一个指向结构体的指针。
 
-```
+```go
 package main
 
 import "fmt"
