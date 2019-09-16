@@ -33,7 +33,7 @@ fmt.Println(*p) // read i through the pointer p
 
 > This is known as "dereferencing" or "indirecting".
 
-这叫做“反引用”或者“重定向”
+这叫做“解引用”或者“重定向”
 
 > Unlike C, Go has no pointer arithmetic.
 
