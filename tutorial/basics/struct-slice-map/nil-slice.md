@@ -6,7 +6,7 @@
 
 > A nil slice has a length and capacity of 0 and has no underlying array.
 
-一个nil切片的长度和容量是0，并且没有指向任何底层数组。
+一个`nil`切片的长度和容量是0，并且没有指向任何底层数组。
 
 ### Code Example
 
