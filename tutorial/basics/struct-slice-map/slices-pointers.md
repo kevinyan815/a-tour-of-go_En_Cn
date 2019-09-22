@@ -8,7 +8,7 @@
 
 改变一个切片的元素将会更改它的底层数组中对应的元素。
 
-Other slices that share the same underlying array will see those changes.
+> Other slices that share the same underlying array will see those changes.
 
 其他共享了相同底层数组的切片也将会看到这些改变。
 
