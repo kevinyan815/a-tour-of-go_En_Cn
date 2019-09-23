@@ -2,7 +2,7 @@
 
 > Switch cases evaluate cases from top to bottom, stopping when a case succeeds.
 
-switch的case语句从上到下计算case的值，知道遇到匹配的case为止。
+switch的case语句从上到下计算case的值，直到遇到匹配的case为止。
 
 ```
 (For example,
