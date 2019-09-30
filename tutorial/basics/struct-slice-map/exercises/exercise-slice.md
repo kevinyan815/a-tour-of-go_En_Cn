@@ -28,3 +28,5 @@ func main() {
 	pic.Show(Pic)
 }
 ```
+
+[Solution](https://github.com/kevinyan815/a-tour-of-go_En_Cn/blob/master/tutorial/basics/struct-slice-map/exercises/exercise-slices.go)
