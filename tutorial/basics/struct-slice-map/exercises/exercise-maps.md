@@ -31,3 +31,5 @@ func main() {
 ```
 
 [SourceURL](https://tour.golang.org/moretypes/23)
+
+[使用了string.Fields的Solution](https://github.com/kevinyan815/a-tour-of-go_En_Cn/blob/master/tutorial/basics/struct-slice-map/exercises/exercise-maps.go)
