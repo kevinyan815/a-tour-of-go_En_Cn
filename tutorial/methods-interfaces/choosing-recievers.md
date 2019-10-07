@@ -10,7 +10,7 @@
 
 > The second is to avoid copying the value on each method call. This can be more efficient if the receiver is a large struct, for example.
 
-第二个是避免每次方法调用时都要发生值拷贝。这在接收者是一个大结构体时能提供很多效率。比如说
+第二个是避免每次方法调用时都要发生值拷贝。这在接收者是一个大结构体时能提高很多效率。比如说
 
 > In this example, both Scale and Abs are with receiver type *Vertex, even though the Abs method needn't modify its receiver.
 
