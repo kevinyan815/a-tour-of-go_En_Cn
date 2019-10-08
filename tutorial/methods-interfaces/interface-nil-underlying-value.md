@@ -52,6 +52,12 @@ func main() {
 func describe(i I) {
 	fmt.Printf("(%v, %T)\n", i, i)
 }
+
+// output:
+// (<nil>, *main.T)
+// <nil>
+// (&{hello}, *main.T)
+// hello
 ```
 
 [SourceURL](https://tour.golang.org/methods/12)
