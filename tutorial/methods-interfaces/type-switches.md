@@ -23,7 +23,7 @@ default:
 
 > This switch statement tests whether the interface value i holds a value of type T or S. In each of the T and S cases, the variable v will be of type T or S respectively and hold the value held by i. In the default case (where there is no match), the variable v is of the same interface type and value as i.
 
-此选择语句判断接口值 i 保存的值类型是 T 还是 S。在 T 或 S 的情况下，变量 v 会分别按 T 或 S 类型保存 i 拥有的值。在默认（即没有匹配）的情况下，变量 v 与 i 的接口类型和值相同。
+此选择语句判断接口值`i`保存的值类型是`T`还是`S`。在`T`或`S`的情况下，变量`v`会分别按`T`或`S`类型保存`i`拥有的值。在默认（即没有匹配）的情况下，变量 `v`与`i`的接口类型和值相同。
 
 ```
 package main
