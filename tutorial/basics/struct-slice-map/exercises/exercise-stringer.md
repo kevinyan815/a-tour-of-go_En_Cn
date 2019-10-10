@@ -29,3 +29,5 @@ func main() {
 ```
 
 [SourceURL](https://tour.golang.org/methods/18)
+
+[Solution](https://github.com/kevinyan815/a-tour-of-go_En_Cn/blob/master/tutorial/basics/struct-slice-map/exercises/exercise-stringer.go)
