@@ -11,7 +11,7 @@ type IPAddr [4]byte
 func (p IPAddr) String() string {
     var ipParts []string
     for _, item := range p {
-    // can use string(item) or string(int(item))
+    // can not use string(item) or string(int(item))
     // string will convert int or byte to their ASCII presentation
     // not literal numeric string like "0"
 	ipParts = append(ipParts, strconv.Itoa(int(item)))
