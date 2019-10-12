@@ -55,4 +55,24 @@ func main() {
 
 fmt.Sprint(e)将调用e.Error()将e转换为字符串。如果Error()方法调用fmt.Sprint(e)，则程序将递归直到内存溢出。可以通过将`e`转换成一个非错误类型(未实现Error接口）的值来避免这种情况。
 
+实际上在Error方法中用error值直接调用`fmt`包中Print相关的函数都会导致无限循环。原因可以在fmt包的源码中找到。
+```
+		switch verb {
+		case 'v', 's', 'x', 'X', 'q':
+			// Is it an error or Stringer?
+			// The duplication in the bodies is necessary:
+			// setting wasString and handled, and deferring catchPanic,
+			// must happen before calling the method.
+			switch v := p.field.(type) {
+			case error:
+				wasString = false
+				handled = true
+				defer p.catchPanic(p.field, verb)
+				p.printField(v.Error(), verb, plus, false, depth)
+				return
+```
+
+源码链接: https://github.com/golang/go/blob/2ed57a8cd86cec36b8370fb16d450e5a29a9375f/src/pkg/fmt/print.go#L639
+
+[SourceURL](https://tour.golang.org/methods/20)
 
