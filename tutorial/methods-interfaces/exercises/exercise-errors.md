@@ -52,7 +52,10 @@ func main() {
 
 [SolutionURL](https://github.com/kevinyan815/a-tour-of-go_En_Cn/blob/master/tutorial/methods-interfaces/exercises/exercise-errors.go)
 
-- 为什么会出现无限循环
+[SourceURL](https://tour.golang.org/methods/20)
+
+
+###  为什么会出现无限循环
 
 
 fmt.Sprint(e)将调用e.Error()将e转换为字符串。如果Error()方法调用fmt.Sprint(e)，则程序将递归直到内存溢出。可以通过将`e`转换成一个非错误类型(未实现Error接口）的值来避免这种情况。
@@ -74,7 +77,6 @@ fmt.Sprint(e)将调用e.Error()将e转换为字符串。如果Error()方法调�
 				return
 ```
 
-源码链接: https://github.com/golang/go/blob/2ed57a8cd86cec36b8370fb16d450e5a29a9375f/src/pkg/fmt/print.go#L639
+fmt源码链接: https://github.com/golang/go/blob/2ed57a8cd86cec36b8370fb16d450e5a29a9375f/src/pkg/fmt/print.go#L639
 
-[SourceURL](https://tour.golang.org/methods/20)
 
