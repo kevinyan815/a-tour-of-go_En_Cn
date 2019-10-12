@@ -50,6 +50,8 @@ func main() {
 }
 ```
 
+[SolutionURL](https://github.com/kevinyan815/a-tour-of-go_En_Cn/blob/master/tutorial/methods-interfaces/exercises/exercise-errors.go)
+
 - 为什么会出现无限循环
 
 
