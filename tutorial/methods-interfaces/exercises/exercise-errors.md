@@ -49,3 +49,10 @@ func main() {
 	fmt.Println(Sqrt(-2))
 }
 ```
+
+- 为什么会出现无限循环
+
+
+fmt.Sprint(e)将调用e.Error()将e转换为字符串。如果Error()方法调用fmt.Sprint(e)，则程序将递归直到内存溢出。可以通过将`e`转换成一个非错误类型(未实现Error接口）的值来避免这种情况。
+
+
